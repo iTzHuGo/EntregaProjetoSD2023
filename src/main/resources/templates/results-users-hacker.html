@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Search Results</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<div class="page">
+		<div class="wrapper">
+			<h1>Search Results</h1>
+			<p>User: <span th:text="${searchTerms}"></span></p>
+			<div class="results">
+				<div class="search-results-div" th:each="entry: ${hackernewsuserlist}">
+					<a th:href="${entry.title}" th:text="${entry.title}" target="_blank"></a>
+				</div>
+			</div>
+			<a href="/menu">
+				<button>Voltar</button>
+			</a>
+		</div>
+	</div>
+</body>
+
+</html>

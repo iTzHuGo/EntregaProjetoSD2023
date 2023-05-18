@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <!-- doesn't work -->
+    <!--
+        <a href="details.html" th:href="http://localhost:8080/thymeleafServlet/greeting.html">once</a>
+    -->
+
+    <a href="details.html" th:href="@{http://localhost:8080/thymeleafServlet/hellofromservlet.html}">twice</a>
+
+    <a href="details.html" th:href="${completeurl}">thrice</a>
+
+    <a href="details.html" th:href="@{/thymeleafServlet/urls.html}">come back</a>
+
+    <a href="details.html" th:href="@{/greeting(name=${thename})}">greeting</a>
+</body>
+</html>

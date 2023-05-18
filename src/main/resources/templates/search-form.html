@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Search Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="wrapper">
+            <br>
+
+            <img src="https://cdn.discordapp.com/attachments/887650198300528680/1108523287438442606/Group_1.png"
+                alt="logo" class="logo">
+
+            <div class="width-100">
+                <form class="app-index-url-form" th:action="@{/search-form}" th:object="${SearchTerms}" method="post">
+                    <input class="app-index-url-form-url" type="text" name="terms"
+                        placeholder="&#128269;  Insira termos de pesquisa" />
+
+                    <div class="buttons">
+
+                        <button type="submit">Pesquisar</button>
+                    </div>
+                </form>
+            </div>
+            <br>
+        </div>
+
+    </div>
+</body>
+
+</html>

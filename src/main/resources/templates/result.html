@@ -1,0 +1,9 @@
+<h2>Resultados da Pesquisa</h2>
+<div>
+    <!-- <span th:each="i: ${#numbers.sequence(0, numero_total_paginas - 1)}" >
+        <a th:href="@{/search_results/{i}}" th:text="${i+1}">
+        </a>
+    </span> -->
+    <span th:text="${results}">
+</div>
+<a th:href="@{/search-terms}">Pesquisar novamente</a>

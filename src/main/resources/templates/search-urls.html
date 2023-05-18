@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="wrapper">
+            <br>
+            <img src="https://cdn.discordapp.com/attachments/887650198300528680/1108523287438442606/Group_1.png"
+                alt="logo" class="logo">
+
+            <div class="width-100">
+
+                <form class="app-index-url-form" th:action="@{/search-urls}" th:object="${project}" method="post">
+                    <input class="app-index-url-form-url" type="text" name="url"
+                        placeholder="&#128269;  Insira um URL para listar URLs associados" />
+                    <div class="buttons">
+
+                        <input type="submit" value="Listar" />
+                    </div>
+                </form>
+
+            </div>
+            <br>
+
+        </div>
+    </div>
+</body>
+
+</html>

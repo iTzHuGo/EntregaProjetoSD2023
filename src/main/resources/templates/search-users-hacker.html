@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" href="styles.css">
+	<title>Search Form</title>
+</head>
+
+<body>
+	<div class="page">
+		<div class="wrapper">
+<br>
+			<div class="image-container">
+				<img src="https://cdn.discordapp.com/attachments/887650198300528680/1108795257304399963/Group_4_2.png"
+					alt="logo" />
+			</div>
+
+			<div class="width-100">
+				<form class="app-index-url-form" th:action="@{/search-users-hacker}" th:object="${SearchTermsHacker}" method="post">
+					<input class="app-index-url-form-url" type="text" name="terms" placeholder="Insira um user de Hacker News" />
+					<button class="input-vanish" type="submit">Pesquisar</button>
+				</form>
+			</div>
+<br>
+
+		</div>
+	</div>
+
+</body>
+
+</html>

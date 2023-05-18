@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Googol</title>
+</head>
+
+<body>
+    <div class="app-index-url">
+        <div class="app-index-url-wrapper">
+            <br>
+            <div class="menu-wrapper-image-container">
+                <img src="https://cdn.discordapp.com/attachments/887650198300528680/1108523287438442606/Group_1.png"
+                    alt="logo" class="logo">
+            </div>
+
+            <div class="width-100">
+                <form class="app-index-url-form" th:action="@{/index-new-url}" th:object="${project}" method="post">
+                    <input class="app-index-url-form-url" type="text" name="url"
+                        placeholder="&#128269;  Escreve um URL para indexar" />
+                    <input class="input-vanish" type="submit" value="" />
+                </form>
+            </div>
+            <br>
+        </div>
+    </div>
+</body>
+
+</html>

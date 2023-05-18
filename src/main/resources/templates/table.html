@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: A table</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td width="20px"><b> ID</b></td>
+                <td><b>NAME</b> </td>
+                <td><b>TELEPHONE</b> </td>
+                <td><b>SALARY</b> </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="empl, iStat : ${emp}" th:style="${iStat.odd}? 'font-weight: bold;'">
+                <td width="20px" th:text="${empl.id}">
+                </td><td th:text="${empl.name}">
+                </td><td th:text="${empl.telephone}">
+                </td><td th:text="${empl.salary}">
+           </td></tr>
+         </tbody>
+        </table>
+</body>
+</html>
